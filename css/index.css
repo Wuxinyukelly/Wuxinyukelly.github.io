@@ -1,27 +1,21 @@
 /*index页面的样式*/
 /*banner*/
 .banner {
-    height: 500px;
-    
-    background-color: #f5f5f5;
+    margin-top: 30px;
 }
 
 .banner .wrapper {
     position: relative;
     height: 500px;
-    /*background-color: pink;*/
 }
-
-
-
 /*侧导航*/
 .banner .aside {
-    position:absolute;
-    left:0;
-    top:0;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 250px;
-    height: 500px;
-    background-color: rgba(0,0,0,0.8);
+    height: 550px;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .banner .aside li {
@@ -32,12 +26,12 @@
 
 .banner .aside a {
     position: relative;
-    /*宽度和父级一样*/
     padding-left: 36px;
     padding-right: 19px;
     display: block;
     height: 50px;
     color: #fff; 
+    
 }
 
 .banner .aside a span {
@@ -46,138 +40,85 @@
 }
 
 .banner .aside a:hover {
-    background-color:rgb(112, 228, 190);
+    background-color:rgb(127, 190, 232);
 }
 
-/*在a里面最后的位置加上箭头*/
-.banner .aside a::after {
-    /*after是子级，a是父级*/
-    position: absolute;
-    right: 19px;
-    top: 19px;
-    content: '';
-    width: 6px;
-    height: 11px;
-    background-image: url(../images/sprites.png);
-    /*horizontal vertical*/
-    background-position: -80px -110px;
+/*yjh czy*/
+
+
+.yjh .hd,
+.czy .hd {
+    margin-top: 50px;
+    height: 96px;
+    line-height: 90px;
 }
 
-/*箭头 逗号隔开并集选择器*/
-.prev,
-.next {
-    position: absolute;
-    top: 228px;
-    width: 45px;
-    height: 45px;
-    background-color: rgba(0,0,0,0.2);
-    background-image: url(../images/sprites.png);
-    border-radius: 50%;
-
-}
-/*背景图位置负责两件事：改变箭头在盒子里面的位置，改变精灵图的位置*/
-/*导致在精灵图中测量的尺寸不准确*/
-/*解决方案：
-1.书写背景图位置属性，借助谷歌的调试工具具体位置数值*/
-/*2.书写标签的时候，a负责盒子，里面再添加一个span负责箭头*/
-.prev {
-    left: 260px;
-    background-position: 14px -60px;
+.czy .hd {
+    margin-top:0px;
 }
 
-.next {
-    right: 10px;
-    background-position: -23px -60px;
-}
-
-/*圆点*/
-.banner ol{
-    position: absolute;
-    left: 680px;
-    bottom: 30px;
-    
-    height: 10px;
-    
-}
-
-.banner ol li {
-    float: left;
-    margin-right: 24px;
-    width: 10px;
-    height: 10px;
-
-    /*纯白：255，纯黑：0*/
-    background-color: rgba(255, 255, 255,0.4);
-    border-radius: 50%;
-
-    cursor:pointer;
-}
-
-.banner ol .current {
-    background-color: white;
-}
-
-/*新鲜好物*/
-.goods .hd {
-    height: 114px;
-    
-    line-height: 114px;
-
-}
-
-.goods .hd h2 {
+.yjh .hd h2,
+.czy .hd h2 {
     float: left;
     font-size: 29px;
     font-weight: 400;
-    height: 114px;
 }
 
-.goods .hd h2 span {
+.yjh .hd h2 span,
+.czy .hd h2 span {
     margin-left: 34px;
     font-size: 16px;
     color: #999;
 }
-.goods .hd a,
-.shengxian .hd .more {
+
+.yjh .hd a,
+.czy .hd a {
     float: right;
     color: #999;
 }
 
-.goods .hd a::after,
-.shengxian .hd .more::after {
+.yjh .hd a::after,
+.czy .hd a::after {
     content: '';
     display:inline-block;
     margin-left: 13px;
     vertical-align: middle;
     width: 7px;
     height: 13px;
-    background-color: green;
-    background-image: url(../images/sprites.png);
     background-position: 0 -110px;
     vertical-align: middle;
 }
 
-.goods .bd li {
+.yjh .bd li,
+.czy .bd li {
     position: relative;
     float: left;
     margin-right: 9px;
-    width: 304px;
-    height: 405px;
-    background-color: #f0f9f4;
+    
+    width: 255px;
+    height: 350px;
+    
     text-align: center;
 
 }
-/*最后一个li没有8px右边距*/
-.goods .bd li:last-child {
+.yjh .bd li:nth-child(4n),
+.czy .hd li:nth-child(4n) {
+    margin-right:0;
+}
+.yjh .bd li:last-child,
+.czy .bd li:last-child {
     margin-right:0;
 }
 
-.goods .bd li img {
-    /*图片给了宽，高度按原比例缩放*/
-    width: 304px;
+
+.yjh .bd li img,
+.czy .bd li img {
+    width: 255px;
+    
 }
 
-.goods .bd li h3{
+.yjh .bd li h3,
+.czy .bd li h3 {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
@@ -185,77 +126,101 @@
 
 }
 
-.goods .bd li div {
+.yjh .bd li div,
+.czy .bd li div  {
     color:crimson;
     font-size: 17px;
 }
 
-.goods .bd li b {
+.yjh .bd li b,
+.czy .bd li b {
     position: absolute;
-    left: 17px;
-    top: 18px;
+    left: 6px;
+    top: -4px;
     width: 28px;
     height: 51px;
-    border: 1px solid #27ba9b;
+    border: 3px solid #27ba9b;
     border-radius: 2px;
     font-size: 18px;
-    color:#27ba9b;
-    font-weight: 400;
+    color: #227966;
+    font-weight: 600;
     line-height: 24px;
+}
+
+
+
+
+/*copyright*/
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 1px solid #000;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
     
+
+    line-height: 58px;
 }
 
-/*生鲜*/
+.footer .top li:last-child {
+    margin-right: 0;
 
-.shengxian .hd {
-    height: 96px;
-   
-    line-height: 96px;
 }
 
-.shengxian .hd h2 {
-    float: left;
-    font-size: 29px;
-    font-weight: 400;
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top:0;
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
 }
 
-.shengxian .hd .more {
-    float: right;
-}
-
-.shengxian .hd ul {
-    float: right;
-    margin-right: 65px;
-}
-
-.shengxian .hd ul li {
-    float: left;
-}
-
-.shengxian .hd li a {
-    padding: 2px 7px;
-    margin-left: 6px;
-}
-
-.shengxian .hd li a:hover {
-    background-color:#27ba9b;
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
     color: #fff;
 }
 
-.shengxian .bd .left{
-    float: left;
-    width: 240px;
-    height: 610px;
-    background-color: pink;
 
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0;
 }
 
-.shengxian .bd .right {
-    float: right;
-    /*右浮动也行*/
-    width: 1000px;
-    height: 610px;
-    background-color: skyblue;
+.footer .bottom {
+    text-align: center;
+    padding-top: 40px;
+    color: #999;
+    font-size: 14px;
 }
 
-/*right left浮动导致bd撑不开，所以bd加上clearfix*/
+.footer .bottom a{
+    color: #999;
+    font-size: 14px;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}
+
+
+
+
