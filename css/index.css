@@ -1,4 +1,22 @@
 /*index页面的样式*/
+/*words*/
+.words p {
+    text-indent: 2em;
+}
+.red {
+    color:rgba(102, 145, 224, 0.787);
+    margin-left: 500px;
+}
+.words a {
+    color:rgba(98, 98, 182, 0.755);
+    text-decoration: underline;
+}
+.words a:hover{
+    color:#27ba9b;
+    text-decoration: underline;
+
+}
+
 /*banner*/
 .banner {
     margin-top: 30px;
@@ -51,17 +69,19 @@
     margin-top: 50px;
     height: 96px;
     line-height: 90px;
+    
 }
 
 .czy .hd {
     margin-top:0px;
 }
 
-.yjh .hd h2,
-.czy .hd h2 {
+.yjh .hd .title,
+.czy .hd .title {
     float: left;
     font-size: 29px;
-    font-weight: 400;
+    font-weight: 700;
+    
 }
 
 .yjh .hd h2 span,
