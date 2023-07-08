@@ -1,6 +1,4 @@
-/*清除默认样式的代码*/
 
-/*去除常见的margin和padding(清除内外边距，div span没有内外边距所以不用加）*/
 body,
 h1,
 h2,
@@ -19,15 +17,12 @@ input {
     margin: 0;
     padding: 0;
 }
-/*内减模式*/
+
 * {
     box-sizing: border-box;
 }
 
 
-/*设置网页统一的字体大小，行高，字体系列相关属性*/
-/*16px字号，1.5倍行高*/
-/*颜色#333，所以颜色#333的文字不需要额外写颜色了*/
 body {
     font: 16px/1.5 "Helvetica Neue",Helvetica,Arial,"Mocrosoft Yahei",
     "Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",snas-serif;
